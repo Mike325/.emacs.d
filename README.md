@@ -1,4 +1,4 @@
-# Emacs dotgfiles
+# Emacs dotfiles
 
 ```shell
                                                              -`
