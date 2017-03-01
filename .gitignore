@@ -1,0 +1,10 @@
+backups/
+elpa/
+auto-save-list/
+/ac-comphist.dat
+/projectile-bookmarks.eld
+/init.elc
+server/
+/projectile.cache
+/savehist
+/tramp
