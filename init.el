@@ -213,8 +213,8 @@
 
   ;; Local ORG mode Evil mappings
   (evil-define-key 'normal org-mode-map (kbd "Q") #'org-ctrl-c-ctrl-c)
-  (evil-define-key 'normal org-mode-map (kbd "C-n") #'org-next-item)
-  (evil-define-key 'normal org-mode-map (kbd "C-p") #'org-previous-item)
+  ;; (evil-define-key 'normal org-mode-map (kbd "C-n") #'org-next-item)
+  ;; (evil-define-key 'normal org-mode-map (kbd "C-p") #'org-previous-item)
 
   (evil-define-key 'normal org-mode-map (kbd "C-j") #'org-forward-heading-same-level)
   (evil-define-key 'normal org-mode-map (kbd "C-k") #'org-backward-heading-same-level)
@@ -285,6 +285,7 @@
   :config
   (nlinum-relative-setup-evil)     ;; setup for evil
   (setq nlinum-relative-redisplay-delay 0)
+  (add-hook 'org-mode-hook 'nlinum-relative-mode)
   (add-hook 'prog-mode-hook 'nlinum-relative-mode))
 
 
@@ -411,6 +412,9 @@
 
 ;; Emacs shortcut to kill the buffer
 (global-set-key (kbd "C-d") 'kill-buffer)
+
+(setq org-todo-keywords
+      '((sequence "TODO" "IN-PROGRESS" "WAITING" "|" "DONE" "CANCELED")))
 
 ;############################################################################
 ; Custom functions
